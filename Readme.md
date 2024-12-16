@@ -164,11 +164,11 @@ Scalability: Easily scales Kafka producers/consumers as the data volume grows.
 Dockerfiles for all components
 Docker Compose to orchestrate multiple containers
 
-*Conclusion*
+**Conclusion**
 The designed real-time data pipeline optimizes ingestion, transformation, and storage processes, ensuring high data quality and enabling robust analytics in BigQuery. This architecture effectively supports the e-commerce platform's need for real-time insights and scalability.
 
 
-**I would be honored to be considered for this role, and I firmly believe that, together with the other team members, we can drive the company to new heights of success.**
+```I would be honored to be considered for this role, and I firmly believe that, together with the other team members, we can drive the company to new heights of success.```
 
 
 
