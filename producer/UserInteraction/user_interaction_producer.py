@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 from confluent_kafka import Producer
 
 # Kafka configuration
-BOOTSTRAP_SERVERS = 'host.docker.internal:29092'  # Docker for Windows or Mac
+BOOTSTRAP_SERVERS = 'localhost:29092'  # Docker for Windows or Mac
 # BOOTSTRAP_SERVERS = '<docker_network_ip>:29092'  # Docker Network IP
 # BOOTSTRAP_SERVERS = '<external_host_ip>:29092'  # External Host IP
 KAFKA_TOPIC = 'userInteraction'
