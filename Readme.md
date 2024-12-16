@@ -2,7 +2,7 @@
 
 The Real-Time Data Pipeline project is a robust and sophisticated system designed to extract, transform, validate, analyze, and store data from multiple sources. The pipeline ensures that other data teams have real-time access to clean and structured data for analysis, predictions, and model development. This comprehensive solution integrates advanced technologies such as Kafka for real-time data streaming, BigQuery as the data warehouse, and Docker containers for scalability, portability, and seamless deployment. Additionally, open-source tools like Jupyter Notebook enable exploratory data analysis (EDA).
 
-project aim
+***Project aim**
 
 The aim of my project is to build a sophisticated yet cost-effective data pipeline capable of handling real-time data ingestion, transformation, validation, and storage from multiple sources. The pipeline is designed to ensure high performance, scalability, and reliability while minimizing costs. By leveraging open-source tools like Apache Kafka for real-time streaming, Docker for containerization, and BigQuery as the data warehouse, the pipeline efficiently supports data analysis, predictive modeling, and visualization, providing real-time access to structured and clean data for the data teams.
 
@@ -25,23 +25,23 @@ System Performance Data
 **1. Tools and Technologies:**
 
 *Producers:*
-Custom producer applications (Producer App1, App2, App3) extract data from the respective sources and push them into the Kafka Brokers. Kafka ensures high throughput and fault-tolerant data streaming.
+Custom producer applications (Producer App1, Producer App2, Producer App3) extract data from the respective sources and push them into the Kafka Brokers. Kafka ensures high throughput and fault-tolerant data streaming.
 
 *Kafka Brokers:*
-Purpose: Act as a distributed messaging platform for real-time ingestion. Kafka topics ensure reliable and ordered streaming of data.
-Reason: Kafka was chosen because it supports scalability, durability, and near real-time data ingestion for high-velocity data, and also an open source tool which is easy to use.
-Dockerized Environment: All ingestion applications (Producer Apps) and (Consumer Apps) are containerized using Docker to ensure portability, easy deployment, and consistency across environments.
+- Purpose: Act as a distributed messaging platform for real-time ingestion. Kafka topics ensure reliable and ordered streaming of data.
+- Reason: Kafka was chosen because it supports scalability, durability, and near real-time data ingestion for high-velocity data, and also an open source tool which is easy to use.
+- Dockerized Environment: All ingestion applications (Producer Apps) and (Consumer Apps) are containerized using Docker to ensure portability, easy deployment, and consistency across environments.
 
 *Storage:*
-BigQuery (Data Warehouse): Once the data is ingested and consumed, it is stored in BigQuery to support transformation, analytics, and visualization.
-Reason for choice: BigQuery is a scalable cloud-based data warehouse optimized for real-time analytics with built-in capabilities to query large datasets efficiently.
+- BigQuery (Data Warehouse): Once the data is ingested and consumed, it is stored in BigQuery to support transformation, analytics, and visualization.
+- Reason for choice: BigQuery is a scalable cloud-based data warehouse optimized for real-time analytics with built-in capabilities to query large datasets efficiently.
 
 *Host Machine Choice: Google Compute Engine*
 
-Although I initially considered deploying Docker using Google Compute Engine, limited access to Google Cloud services and challenges with card verification made me explore alternative options. Ultimately, Google Compute Engine (GCE) stood out as the best choice because of its ability to handle large-scale, persistent workflows effectively.
+```Although I initially considered deploying Docker using Google Compute Engine, limited access to Google Cloud services and challenges with card verification made me explore alternative options. Ultimately, Google Compute Engine (GCE) stood out as the best choice because of its ability to handle large-scale, persistent workflows effectively.```
 
 Why Google Compute Engine?
-Full Customization and Scalability:
+- Full Customization and Scalability:
 GCE allows for a fully customizable architecture tailored to the project’s needs, including real-time data ingestion, transformation, and analytics. This flexibility ensures the infrastructure can handle varying data loads efficiently.
 
 *Persistent and Real-Time Processing:*
