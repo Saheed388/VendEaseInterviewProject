@@ -1,0 +1,5 @@
+confluent-kafka
+google-cloud-storage
+pandas
+google-cloud
+google-cloud-bigquery
