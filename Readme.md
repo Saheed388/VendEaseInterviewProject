@@ -16,7 +16,7 @@ https://github.com/Saheed388/VendEaseInterviewProject/blob/main/imagesFromProjec
 **1. Data Ingestion and Storage Optimization:**
 
 *Pipeline Design*
-The data ingestion pipeline was designed to efficiently capture high-velocity, unstructured data from multiple sources:
+- The data ingestion pipeline was designed to efficiently capture high-velocity, unstructured data from multiple sources:
 
 User Data
 Transactions Data
@@ -135,7 +135,7 @@ https://github.com/Saheed388/VendEaseInterviewProject/blob/main/EDA_Analysis.ipy
 
 **5. Data Pipeline Architecture Diagram**
 
-The following diagram summarizes the real-time streaming data pipeline architecture:
+- The following diagram summarizes the real-time streaming data pipeline architecture:
 
 [Attach the architecture diagram provided above]
 Extraction: Producers → Kafka Brokers
@@ -148,8 +148,8 @@ https://github.com/Saheed388/VendEaseInterviewProject/blob/main/imagesFromProjec
 
 
 ***6. Dockerized Application***
-The entire application is dockerized to ensure seamless deployment and scalability:
-Components Dockerized:
+- The entire application is dockerized to ensure seamless deployment and scalability:
+- Components Dockerized:
 
 Producer Applications
 Consumer Applications
