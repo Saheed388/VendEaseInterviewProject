@@ -9,13 +9,10 @@ from confluent_kafka import Producer
 BOOTSTRAP_SERVERS = 'localhost:9092'
 KAFKA_TOPIC = 'systemperformance'
 
-# Local file path
 LOCAL_FILE_PATH = 'C:/Users/HP/Downloads/system_performance.html'
 
-# Persistent set to track seen data
 seen_entries = set()
 
-# Initialize Kafka producer
 producer = Producer({'bootstrap.servers': BOOTSTRAP_SERVERS})
 
 
@@ -25,7 +22,7 @@ def extract_data_from_html(file_content):
     table_rows = soup.find_all('tr')
 
     new_data = []
-    global seen_entries  # Ensure we use the persistent set
+    global seen_entries  
 
     for row in table_rows:
         columns = row.find_all('td')
@@ -37,19 +34,16 @@ def extract_data_from_html(file_content):
             error_rate = columns[3].text.strip()
             server_load = columns[4].text.strip()
 
-            # Convert timestamp to datetime
             try:
-                timestamp = datetime.fromisoformat(timestamp_str.replace('Z', '+00:00'))  # Handle ISO format
+                timestamp = datetime.fromisoformat(timestamp_str.replace('Z', '+00:00'))  
             except ValueError:
                 print(f"Invalid timestamp format: {timestamp_str}")
                 continue
 
-            # Create a unique identifier for each row
             unique_key = (timestamp, region)
 
-            # Check if the entry is new
             if unique_key not in seen_entries:
-                seen_entries.add(unique_key)  # Mark entry as seen
+                seen_entries.add(unique_key)  
                 new_data.append({
                     'Timestamp': timestamp.isoformat(),
                     'Region': region,
@@ -63,15 +57,12 @@ def extract_data_from_html(file_content):
 
 try:
     while True:
-        # Check if the local file exists
         if os.path.exists(LOCAL_FILE_PATH):
             print(f"Processing file: {LOCAL_FILE_PATH}")
             try:
-                # Read the local HTML file
                 with open(LOCAL_FILE_PATH, 'r', encoding='utf-8') as file:
                     file_content = file.read()
 
-                # Extract only new structured data
                 new_data = extract_data_from_html(file_content)
 
                 # Send new data to Kafka

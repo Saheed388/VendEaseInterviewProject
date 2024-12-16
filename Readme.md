@@ -89,6 +89,7 @@ Its lightweight nature reduces data payload size, improving application performa
 
 *ETL Workflow:*
 Extract: Kafka → Consumers
+BeautifulSoup is used to extract data from web pages by parsing HTML and XML formats.
 Transform: Custom Python scripts for parsing and cleaning
 Load: Structured data is loaded into BigQuery tables
 
